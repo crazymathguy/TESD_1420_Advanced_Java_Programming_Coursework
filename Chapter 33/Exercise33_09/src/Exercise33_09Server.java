@@ -68,6 +68,7 @@ public class Exercise33_09Server extends Application {
 
 				while (true) {
 					String message = fromClient.readLine();
+					if (message.isEmpty()) continue;
 					Platform.runLater(() -> taServer.appendText(message.trim()));
 				}
 			} catch (Exception ex) {
