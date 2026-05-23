@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane id="BorderPane" prefHeight="200" prefWidth="320"
+		xmlns:fx="http://javafx.com/fxml" fx:controller="FXMLDocumentController">
+	<top>
+		<MenuBar>
+			<menus>
+				<Menu text="Operation">
+					<items>
+						<MenuItem text="Calculate" onAction="#handleCalculate" />
+						<MenuItem text="Exit" onAction="#handleExit" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<GridPane fx:id="GridPane">
+			<columnConstraints>
+				<ColumnConstraints hgrow="ALWAYS" />
+			</columnConstraints>
+			<padding>
+				<Insets top="10" right="10" bottom="10" left="10" />
+			</padding>
+			<children>
+				<Label text="Investment Amount:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+				<Region GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+				<Label text="Number of Years:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+				<Region GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+				<Label text="Annual Interest Rate:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+				<Region GridPane.rowIndex="6" GridPane.vgrow="ALWAYS" />
+				<Label text="Future Amount:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+				<Region GridPane.rowIndex="8" GridPane.vgrow="ALWAYS" />
+				<TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="amountField"
+					alignment="CENTER_RIGHT" />
+				<TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="yearsField"
+					alignment="CENTER_RIGHT" />
+				<TextField GridPane.columnIndex="1" GridPane.rowIndex="5" fx:id="rateField"
+					alignment="CENTER_RIGHT" />
+				<TextField GridPane.columnIndex="1" GridPane.rowIndex="7" fx:id="futureField"
+					alignment="CENTER_RIGHT" />
+				<Button text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="9"
+					GridPane.halignment="RIGHT" onAction="#handleCalculate" fx:id="button" />
+			</children>
+		</GridPane>
+	</center>
+</BorderPane>
